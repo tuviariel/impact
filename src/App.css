@@ -1,38 +1,503 @@
+@font-face {
+  font-family: Alef;
+  src: url(./content/AlefFont/Alef-Webfont/Alef-Regular.woff)
+}
 .App {
   text-align: center;
+  font-family: Alef;
+  direction: rtl;
 }
-
+.mainComponent {
+  padding-bottom: 5px;
+}
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  width: 60vmin;
+  height: auto;
+  padding-top: 3vh;
+  /*margin-bottom: 4vh;
+  pointer-events: none;*/
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.firstApp-logo {
+  width: 18vmin;
+  height: auto;
+  padding-top: 3vh;
+}
+.first-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4vh;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #003552;
   min-height: 100vh;
+  min-width: 100vw;
+  /*display: flex;
+  flex-direction: row;*/
+  align-items: center;
+  font-size: calc(16px + 2vmin);
+  color: #fff;
+}
+
+.App-login {
+  background-color: rgba(255,255,255, 0.95);
+  min-height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
+.loginInput{
+  width: 55vmin;
+  text-align: right;
+}
+.placeholderRight{
+  text-align: right;
+  border-width: 1px;
+  border-radius: 5px;
+}
+.loginButton{
+  width: 55vmin;
+  background-color: #003552;
+  color: white;
+  border-radius: 3px;
+  border-width: 0px;
+  padding: 8px;
+}
+.mainTitle {
+  font: Alef;
+}
+.secondTitle {
+  color: #ffb52c;
+  text-align: center;
+}
+.startTitle {
+  margin-top: 50px;
+  color: #ffb52c;
+  cursor: pointer;
+}
+.startTitle:hover {
+  color: yellow;
+}
+
+/* Lists and Items */
+.List {
+  margin: 10px;
+  align-self: center;
+  min-height: 75px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px #7f7f7f;
+  padding: 5px;
+  border-radius: 1px;
+  background-image: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,.6));;
+}
+.staticList {
+  height: fit-content;
+}
+.listTitle {
+  font-size: 14px; 
+  font-weight: 700;
+  font-family: Alef;
+  padding-right: 7px;
+  text-align: right;
+  color: black;
+}
+.listEditTitle {
+  font-size: 14px; 
+  font-weight: 700;
+  font-family: Alef;
+  padding-right: 40px;
+  text-align: right;  
+}
+.listItem {
+  text-align: right;
+  vertical-align: top;
+  font-weight: 400;
+  font-family: Alef;
+  padding-right: 7px;
+  font-size: 14px;
+  direction: rtl;
+  color: black;
+}
+.listItemShow {
+  color: white;
+  padding: 7px;
+  padding-right: 20px;
+}
+
+.editingList {
+  margin: 10px;
+  align-self: center;
+  min-height: 85px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px #7f7f7f;
+  padding: 5px;
+  border-radius: 1px;
+}
+.editItem {
+  font-size: 14px;
+  font-weight: 700;
+  font-family: Alef;
+  padding-right: 13px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 5px;
+  /*direction: rtl;*/
+}
+
+
+/* Text Colors and more.. id's.. */
+.belief{
+  color: #98c7d3;
+  border-color: #98c7d3;
+}
+
+.beliefBG {
+  background-color: rgba(255,255,255,.3);
+  background-image: url('./content/assets/infoMapAssets/interpretations-box.png');
+  background-size: 100% 100%;  
+}
+.feeling{
+  color: #1ac4ff;
+  border-color: #1ac4ff;
+}
+.feelingBG {
+  background-image: url('./content/assets/infoMapAssets/feelings-box.png');
+  background-size: 100% 100%;
+  background-color: rgba(255,255,255,.3);
+}
+.strength{
+  color: #c6a2dd;
+  border-color: #c6a2dd;
+}
+.strengthBG {
+  background-image: url('./content/assets/infoMapAssets/strengths-box.png');
+  background-size: 100% 100%;
+  background-color: rgba(255,255,255,.3);
+}
+.passion{
+  color: #ff4200;
+  border-color: #ff4200;
+}
+.passionBG {
+  background-image: url('./content/assets/infoMapAssets/desires-box.png');
+  background-size: 100% 100%;
+  background-color: rgba(255,255,255,.3);
+}
+#emptyBox {
+  color: #757575;
+  font-weight: 400;
+  font-family: Alef;
+  font-size: 14px;
+  padding-right: 7px;
+}
+#alertShow {
+  color: #d45147;
+  font-weight: 400;
+  font-family: Alef;
+  font-size: 14px;
+}
+#regularShow {
+  color: #fff;
+  font-weight: 400;
+  font-family: Alef;
+  font-size: 14px;
+  padding-right: 7px;
+}
+#blackText {
+  color: black;
+  font-weight: 400;
+  font-family: Alef;
+  font-size: 14px;
+  text-align: right;
+}
+/* not used: 
 .App-link {
   color: #61dafb;
+}*/
+
+/* Array selections to show Buttons */
+.headerButtons {
+  width: 100vw; 
+  /* padding-top: 3vh;
+  margin-bottom: 10px; */
+  justify-content: center;
+  display: flex;
+  /*flex-direction: row;*/
+}
+.footerButtons {
+  position: fixed;
+  bottom: 0;
+  right: 40vw;
+  left: 40vw;
+  align-self: center;
+}
+.footerButton {  
+  background-color: #003552;
+  border-radius: 50%;
+  padding: 10px;
+  width: 8vh;
+}
+.roundButton {
+  margin: 5px;
+  width: 15vmin;
+}
+.bigRoundButton {
+  margin: 10px;
+  margin-bottom: 0px;
+  width: 20vw;
+  height: 20vw;
+}
+.smallRoundButton {
+  width: 10vw;
+  height: 10vw;
+  margin-right: 8px;
+  margin-left: 8px;
+  margin-top: 4px;
+}
+.roundButtonText{
+  color: #fff;
+  font-weight: 400;
+  font-family: Alef;
+  font-size: 14px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Writing stories */
+.storyDiv{
+  display: block;
+}
+.storyTitle{
+  text-align: start;
+  color: #fff;
+  margin-right: 15px;
+  font: Alef;
+  font-weight: 400;
+  font-size: 14px;
+}
+.sentince {
+  text-align: start;
+  color: #fff;
+  margin-right: 15px;
+  font: Alef;
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.sentinces {
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+.storyTitle2 {
+  color: #ffb52c;
+  text-align: center;
+  font: Alef;
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 2px;
+}
+.buttonsBottom{
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+}
+.storyButton {
+  border-width: 0px;
+  border-radius: 50%;
+  background-color: #003552;
+  align-self: flex-start;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  width: 25px;
+  color: #fff;
+  font-family: Alef;
+  font-weight: 400;
+}
+.infoButton {
+  border-width: 0px;
+  border-radius: 50%;
+  background-color: #003552;
+  align-self: flex-start;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  width: 25px;
+  color: #fff;
+  font-family: Alef;
+  font-weight: 400;
+}
+.infoBox {
+  width: 80vw;
+  height: fit-content;
+  position: absolute;
+  border-radius: 1px;
+  left: 25px;
+  align-self: center;
+  
+  text-align: right;
+  font-size: 14px;
+  font-family: Alef;
+  padding: 7px;
+  background-color: white;
+  
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.storyBody {
+  width: 90vw;
+  height: 135px;
+  direction: rtl;
+}
+/* Flow Controle */
+.nextText {
+  text-align: center;
+  color: #ffb52c;
+  font: Alef;
+  font-weight: 400;
+  font-size: 22px;
+  margin-top: 8px;
+}
+.emptyNextText {
+  align-self: center;
+}
+.nextImg {
+  width: 25px;
+}
+.backButton{
+  width: 7px;
+  margin: 7px;
+  margin-top: 3.5px;
+  float: left;
+}
+.backButtonText{
+  color: #fff;
+  font-weight: 400;
+  font-family: Alef;
+  font-size: 14px;
+  text-align: end;
+  padding: 10px;
+  padding-top: 0px;
+  padding-bottom: 3px;
+}
+
+.logos {
+  align-self: center;
+  margin: 10px;
+  width: 10vmin;
+  height: auto;
+}
+
+/* Regarding the Video show - get the responsive to work well
+https://www.npmjs.com/package/react-player */ 
+/*.videoDiv {
+  width: 95vw;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+.good{
+}*/
+.videoWrapper{
+  /*position: relative;
+  padding-top: 1%;  Player ratio: 100 / (1280 / 720) */
+  margin-top: 10px;
+  max-width: 95vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+.videoPlayer{
+  /*position: absolute;
+  top: 0;
+  left: 0;*/
+}
+.videoInfo {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+
+}
+.videoInfoButton{
+  
+  height: 30px;
+  margin-top: -8px;
+  background-color: #ffb42c;
+  cursor: pointer;
+  
+}
+.plus {
+  margin-right: auto;
+  margin-left: auto;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  background-image: url('./content/assets/plus.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+}
+.x {
+  transform: rotate(45deg);
+}
+
+.videoInfoBox{
+  width: calc(100% - 16px);
+  height: fit-content;
+  background-color: white;
+  text-align: right;
+  padding: 8px;
+  color: black;
+  font-family: Alef;
+  font-size: 16px;
+}
+
+/* the main Circle- try to enlarge */
+.circleDiv{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.right {
+  width: 25%;
+  float: right;
+  margin-left: 20px;
+  /*grid-area;*/
+}
+.center {
+  width: 25%;
+  /*align-self: center;*/
+}
+.left {
+  width: 25%;
+  float: left;
+  margin-right: 20px;
+}
+.chose {
+  background-image: #fff;
+}
+.horizon {
+  display: flex;
+  flex-direction: row;
+  margin-right: 10px;
+  align-items: center;
+}
+.longText {
+  font-size: 12px;
+}
+.bold {
+  font-weight: bolder;
 }
